@@ -1,0 +1,61 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+
+        kotlinVersion = '1.6.21'
+
+        navigationVersion = '2.4.0-rc01'
+        hiltVersion = '2.44'
+    }
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url 'https://repo1.maven.org/maven2/'
+        }
+    }
+
+
+    dependencies {
+        //gradle
+        classpath 'com.android.tools.build:gradle:4.2.2'
+
+        //firebase google services
+        classpath 'com.google.gms:google-services:4.3.5'
+       // classpath 'com.google.gms:google-services:4.3.10'
+
+
+        //kotlin gradle plugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+        //safe args
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigationVersion"
+
+        //hilt
+        classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
+
+
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+        //source of toasty library and MPandroidChart
+        maven { url "https://jitpack.io" }
+
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_round_extreme_white"
+    android:padding="10dp">
+
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:padding="8dp"
+        android:text="Choose Gender"
+        android:textSize="@dimen/text_size_smaller"
+
+        app:layout_constraintBottom_toTopOf="@+id/tvMale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginTop"
+        android:background="@drawable/bg_color_primary"
+        android:drawableStart="@drawable/ic_baseline_man_24"
+        android:drawableTint="@color/gray"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="8dp"
+
+        android:text="Male"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_smaller"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="2.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+    <TextView
+        android:id="@+id/tvFemale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginTop"
+        android:background="@drawable/bg_color_primary"
+        android:drawableStart="@drawable/ic_baseline_man_24"
+        android:drawableTint="@color/gray"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="8dp"
+
+        android:text="Female"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_smaller"
+        android:textStyle="bold"
+        app:layout_constraintDimensionRatio="2.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHeader" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".3" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_round_green"
+        android:gravity="center"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="2.5:1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMale" />
+
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:background="@drawable/bg_button_red"
+        android:gravity="center"
+        android:text="cancel"
+        android:textAllCaps="false"
+
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="@id/btnSave" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

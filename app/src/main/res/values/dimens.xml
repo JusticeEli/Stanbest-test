@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size">25sp</dimen>
+    <dimen name="button_round">10dp</dimen>
+    <dimen name="marginTopTopTop">24dp</dimen>
+    <dimen name="marginTop">8dp</dimen>
+    <dimen name="box_radius">10sp</dimen>
+    <item name="start_guideline" type="dimen">0.05</item>
+    <item name="end_guideline" type="dimen">0.95</item>
+    <dimen name="text_size_smaller">16sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="text_size_medium_medium">18sp</dimen>
+</resources>
